@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export && cd out && touch .nojekyll",
+    "deploy": "gh-pages -d out --dotfiles"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "18.11.10",
+    "gh-pages": "5.0.0",
     "typescript": "^4.9.3"
   }
 }
